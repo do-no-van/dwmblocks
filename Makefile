@@ -22,8 +22,9 @@ dwmblocks: dwmblocks.c blocks.def.h blocks.h
 blocks.h:
 	cp blocks.def.h $@
 
+# Modified to automatically remove blocks.h
 clean:
-	rm -f *.o *.gch dwmblocks
+	rm -f blocks.h *.o *.gch dwmblocks
 
 install: dwmblocks
 	mkdir -p ${DESTDIR}${PREFIX}/bin
